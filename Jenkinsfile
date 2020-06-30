@@ -21,6 +21,9 @@ spec:
 """
         }
     }
+    options {
+        timestamps()
+    }
     stages {
         stage('Compile') {
             steps {

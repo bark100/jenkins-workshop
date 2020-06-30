@@ -41,9 +41,9 @@ spec:
             }
         }
         stage('Packakge') {
-            // when {
-            //    branch 'master'
-            // }
+            when {
+               branch 'master'
+            }
             steps {
                 sh "sbt package"
             }

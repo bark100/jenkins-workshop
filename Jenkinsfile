@@ -22,7 +22,7 @@ spec:
         }
     }
     options {
-        timestamps()
+        retry(2)
     }
     stages {
         stage('Compile') {

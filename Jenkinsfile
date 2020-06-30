@@ -32,6 +32,14 @@ spec:
                 sh "sbt 'testOnly -- -n UnitTest'"
             }
         }
+        stage('Slow tests') {
+            when {
+                branch 'master'
+            }
+            steps {
+                sh "sbt 'testOnly -- -n Slow'"
+            }
+        }
     }
     post {
         always {
